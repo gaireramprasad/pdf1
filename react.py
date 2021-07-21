@@ -20,7 +20,7 @@ while count < num_pages:                       #The while loop will read each pa
     text += pageObj.extractText()
     
 #Below if statement exists to check if the above library returned #words. It's done because PyPDF2 cannot read scanned files.
-"""
+
 if text != "":
     text = text
     
@@ -49,4 +49,4 @@ df['tf_idf'] = df['keywords'].apply(lambda x: weightage(x,text)[3])
 
 df = df.sort_values('tf_idf',ascending=True)
 df.to_csv('Keywords.csv')
-df.head(25)"""
+df.head(25)
